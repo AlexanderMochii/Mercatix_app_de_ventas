@@ -1,0 +1,46 @@
+.carrito-sidebar {
+  position: fixed;
+  top: 0;
+  right: -400px; /* Oculto */
+  width: 300px;
+  height: 100vh;
+  background-color: #1e1e1e;
+  color: white;
+  box-shadow: -2px 0 8px rgba(0,0,0,0.5);
+  transition: right 0.3s ease;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.carrito-sidebar.abierto {
+  right: 0;
+}
+
+.carrito-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#cerrar-carrito {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Icono carrito en la navbar */
+.right-menu .cart i {
+  color: white;              /* Icono blanco */
+  font-size: 1.5rem;         /* Tamaño del icono */
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.right-menu .cart:hover i {
+  color: #1DB954;            /* Verde Mercatix al pasar mouse */
+}

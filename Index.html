@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mercatix</title>
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/ccs_general.css" />
+    <link rel="stylesheet" href="css/publicaciones.css" />
+    <link rel="stylesheet" href="css/carrito.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="preloader">
+        <img src="imag/1.png" alt="Mercatix" class="preloader-logo">
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">Mercatix</div>
+
+        <form class="search-menu" onsubmit="return false;">
+            <input type="search" placeholder="Buscar productos..." aria-label="Buscar productos" id="searchInput" />
+
+            <button type="submit" aria-label="Buscar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+
+        <div class="right-menu">
+            <a href="#" class="cart" aria-label="Carrito de compras">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+
+
+            <a href="login2.html" class="btn login">Iniciar sesión</a>
+            <a href="login.html" class="btn signup">Crear cuenta</a>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container">
+        <div class="three-columns">
+
+            <aside class="sidebar-left">
+                <nav>
+                    <ul>
+                        <li><a href="Index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                    </ul>
+
+                    <ul>
+                        <li class="menu-title">Perfil</li>
+                        <li><a href="#"><i class="fa-solid fa-user"></i> Mi Perfil</a></li>
+                        <li><a href="#"><i class="fa-solid fa-users"></i> Tiendas que Sigues</a></li>
+                    </ul>
+
+                    <ul>
+                        <li class="menu-title">Explorar</li>
+                        <li><a href="#"><i class="fa-solid fa-utensils"></i> Comida</a></li>
+                        <li><a href="#"><i class="fa-solid fa-shirt"></i> Ropa</a></li>
+                        <li><a href="#"><i class="fa-solid fa-mobile-screen-button"></i> Teléfonos</a></li>
+                        <li><a href="#"><i class="fa-solid fa-tv"></i> Electrónica</a></li>
+                    </ul>
+
+                    <ul>
+                        <li class="menu-title">Configuración</li>
+                        <li><a href="#"><i class="fa-solid fa-cog"></i> Ajustes</a></li>
+                        <li><a href="#"><i class="fa-solid fa-sign-out-alt"></i> Cerrar sesión</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <section class="main-content">
+                <div class="posts-container">
+                    <article class="post-card" aria-label="Publicación de usuario">
+                        <header class="post-header">
+                            <img class="profile-pic" src="imag/logo2.jpg" alt="Foto de perfil de Juan Pérez" />
+                            <div class="user-info">
+                                <div class="user-name">Sandwiches</div>
+                                <div class="post-time">hace 1 horas</div>
+                            </div>
+                        </header>
+
+
+                        <div class="post-content">
+                            <h4>Menú del Día</h4>
+
+                            <ul>
+                                <li><strong>Clásico Jamón & Queso – C$80</strong><br>
+                                    Pan suave, jamón ahumado, queso derretido y ese toque casero que te encanta.
+                                </li>
+
+                                <li><strong>Pollo BBQ – C$100</strong><br>
+                                    Trozos de pollo a la BBQ, cebolla caramelizada y queso cheddar en pan tostado.
+                                </li>
+
+                                <li><strong>Vegetariano Deluxe – C$85</strong><br>
+                                    Aguacate, tomate, lechuga fresca, queso mozzarella y aderezo especial en pan
+                                    integral.
+                                </li>
+
+                                <li><strong>Sándwich Supremo – C$120</strong><br>
+                                    Jamón, salami, bacon crujiente, doble queso, pepinillos y mostaza especial.
+                                </li>
+
+                                <li><strong>3 Quesos Fundidos – C$90</strong><br>
+                                    Mozzarella, cheddar y queso crema en pan dorado al punto perfecto.
+                                </li>
+                            </ul>
+
+                            <p><strong>Bebidas frías – desde C$30</strong><br>
+                                Refrescos, jugos naturales y café helado.
+                            </p>
+
+                            <p>¡Visítanos o puedes ordenarlo desde aquí!</p>
+
+                            <p>#MenúDelDía #SandwichLovers #SaborQueEnamora #ComidaCasera</p>
+                        </div>
+
+
+                        <img class="post-image" src="imag/s1.jpg" alt="Imagen adjunta a la publicación" />
+
+                        <div class="post-actions">
+                            <button class="btn-like">
+                                <i class="fa-solid fa-star"></i> Me gusta
+                            </button>
+                            <button class="btn-comment-toggle">
+                                <i class="fa-regular fa-comment"></i> Comentar
+                            </button>
+                            <button class="btn-share">
+                                <i class="fa-solid fa-share"></i> Compartir
+                            </button>
+                            <button class="btn-save">
+                                <i class="fa-regular fa-bookmark"></i> Guardar
+                            </button>
+                            <button class="btn-add-cart">
+                                <i class="fa-solid fa-cart-plus"></i> Añadir al carrito
+                            </button>
+                        </div>
+
+                        <div class="comment-section" style="display:none;">
+                            <textarea class="comment-input" rows="2" placeholder="Escribe un comentario..."></textarea>
+                            <button class="btn-submit-comment">Enviar</button>
+                            <div class="comments-list"></div>
+                        </div>
+                    </article>
+
+                    <article class="post-card" aria-label="Publicación de usuario">
+                        <header class="post-header">
+                            <img class="profile-pic" src="imag/logo1.jpg" alt="Foto de perfil de Juan Pérez" />
+                            <div class="user-info">
+                                <div class="user-name">Fashion Store</div>
+                                <div class="post-time">hace 3 horas</div>
+                            </div>
+                        </header>
+
+
+                        <div class="post-content">
+                            ¡Camina con estilo y comodidad! Estos Zapatos De Moda De Tacón Grueso Y Huecos, Y Decorados
+                            Con Diamantes De Imitación son el complemento ideal para
+                            tus días y noches. Versátiles, modernos y diseñados para que no pares. ¿Te animas a
+                            probarlos?
+                            #ZapatosDeModa #FashionStore
+                        </div>
+
+                        <div class="post-collage">
+                            <img src="imag/z1.jpg" alt="Imagen 1" />
+                            <img src="imag/z2.jpg" alt="Imagen 2" />
+
+                        </div>
+
+
+                        <div class="post-actions">
+                            <button class="btn-like">
+                                <i class="fa-solid fa-star"></i> Me gusta
+                            </button>
+                            <button class="btn-comment-toggle">
+                                <i class="fa-regular fa-comment"></i> Comentar
+                            </button>
+                            <button class="btn-share">
+                                <i class="fa-solid fa-share"></i> Compartir
+                            </button>
+                            <button class="btn-save">
+                                <i class="fa-regular fa-bookmark"></i> Guardar
+                            </button>
+                            <button class="btn-add-cart">
+                                <i class="fa-solid fa-cart-plus"></i> Añadir al carrito
+                            </button>
+                        </div>
+
+                        <div class="comment-section" style="display:none;">
+                            <textarea class="comment-input" rows="2" placeholder="Escribe un comentario..."></textarea>
+                            <button class="btn-submit-comment">Enviar</button>
+                            <div class="comments-list"></div>
+                        </div>
+                    </article>
+
+                    <article class="post-card" aria-label="Publicación de usuario">
+                        <header class="post-header">
+                            <img class="profile-pic" src="imag/logo3.jpg" alt="Foto de perfil de Juan Pérez" />
+                            <div class="user-info">
+                                <div class="user-name">Milk Shakes</div>
+                                <div class="post-time">hace 27 minutos</div>
+                            </div>
+                        </header>
+
+
+                        <div class="post-content">
+                            Disfruta de nuestro nuevo batido Milk shakes sabor fresca
+                            a tan solo – desde C$150 con un 20% si lo ordenas desde aqui en Mercatix.
+                        </div>
+
+                        <img class="post-image" src="imag/b2.jpg" alt="Imagen adjunta a la publicación" />
+
+                        <div class="post-actions">
+                            <button class="btn-like">
+                                <i class="fa-solid fa-star"></i> Me gusta
+                            </button>
+                            <button class="btn-comment-toggle">
+                                <i class="fa-regular fa-comment"></i> Comentar
+                            </button>
+                            <button class="btn-share">
+                                <i class="fa-solid fa-share"></i> Compartir
+                            </button>
+                            <button class="btn-save">
+                                <i class="fa-regular fa-bookmark"></i> Guardar
+                            </button>
+                            <button class="btn-add-cart">
+                                <i class="fa-solid fa-cart-plus"></i> Añadir al carrito
+                            </button>
+                        </div>
+
+                        <div class="comment-section" style="display:none;">
+                            <textarea class="comment-input" rows="2" placeholder="Escribe un comentario..."></textarea>
+                            <button class="btn-submit-comment">Enviar</button>
+                            <div class="comments-list"></div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <aside class="sidebar-right">
+                <h3><i class="fa-solid fa-comments"></i> Bandeja de chats</h3>
+                <ul class="chat-preview-list">
+                    <li>
+                        <i class="fa-solid fa-store"></i>
+                        <span>Tienda El Buen Precio</span>
+                        <i class="fa-solid fa-circle-dot chat-status online"></i>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-store"></i>
+                        <span>Boutique Aurora</span>
+                        <i class="fa-solid fa-circle-dot chat-status offline"></i>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-store"></i>
+                        <span>Panadería El Trigal</span>
+                        <i class="fa-solid fa-circle-dot chat-status online"></i>
+                    </li>
+                </ul>
+
+                <hr>
+
+                <h3><i class="fa-solid fa-bolt"></i> Novedades</h3>
+                <ul class="novedades-list">
+                    <li><i class="fa-solid fa-arrow-trend-up"></i> Promociona tu tienda más fácilmente.</li>
+                    <li><i class="fa-solid fa-gift"></i> Activa cupones de descuento.</li>
+                    <li><i class="fa-solid fa-chart-line"></i> Nuevas estadísticas en tiempo real.</li>
+                </ul>
+
+                <hr>
+
+                <h3><i class="fa-solid fa-headset"></i> Soporte rápido</h3>
+                <p>¿Tienes dudas técnicas o necesitas ayuda? Contáctanos desde el panel de ayuda.</p>
+            </aside>
+
+        </div>
+    </main>
+
+    <script src="js/interactions.js"></script>
+    <script src="js/carritov.js"></script>
+    <div id="carrito-sidebar" class="carrito-sidebar">
+        <div class="carrito-header">
+            <h4>Tu carrito</h4>
+            <button id="cerrar-carrito" aria-label="Cerrar carrito">&times;</button>
+        </div>
+        <div class="carrito-contenido">
+            <p>Tu carrito está vacío.</p>
+        </div>
+    </div>
+
+    <script>
+        const chats = [
+            { id: "chat1", name: "Tienda El Buen Precio" },
+            { id: "chat2", name: "Boutique Aurora" },
+            { id: "chat3", name: "Panadería El Trigal" },
+        ];
+
+        document.querySelectorAll(".chat-preview-list li").forEach((li, index) => {
+            li.addEventListener("click", () => {
+                const chat = chats[index];
+                openChatWindow(chat.id, chat.name);
+            });
+        });
+
+        function openChatWindow(id, name) {
+            if (document.getElementById(id)) return;
+
+            const container = document.getElementById("chat-windows-container");
+            const chatBox = document.createElement("div");
+            chatBox.className = "chat-window";
+            chatBox.id = id;
+            chatBox.innerHTML = `
+  <div class="chat-header">
+    <span><i class="fa-solid fa-store"></i> ${name}</span>
+    <button onclick="document.getElementById('${id}').remove()">&times;</button>
+  </div>
+  <div class="chat-body">
+    <div class="chat-placeholder">
+      <p>Este es el inicio de tu conversación con <strong>${name}</strong>.</p>
+    </div>
+  </div>
+  <div class="chat-actions">
+    <button title="Adjuntar archivo"><i class="fa-solid fa-paperclip"></i></button>
+    <button title="Enviar emoji"><i class="fa-regular fa-face-smile"></i></button>
+  </div>
+  <div class="chat-input">
+    <input type="text" placeholder="Escribe un mensaje...">
+    <button title="Enviar mensaje"><i class="fa-solid fa-paper-plane"></i></button>
+    <button title="Enviar audio"><i class="fa-solid fa-microphone"></i></button>
+  </div>
+`;
+
+            container.appendChild(chatBox);
+        }
+    </script>
+
+    <script>
+        window.addEventListener("load", () => {
+            const preloader = document.getElementById("preloader");
+            setTimeout(() => {
+                preloader.style.display = "none";
+            }, 3000);
+        });
+    </script>
+
+</body>
+<div id="chat-windows-container"></div>
+
+</html>

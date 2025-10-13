@@ -1,0 +1,171 @@
+.post-card {
+  background-color: #181818;
+  color: #fff;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.post-header .user-name {
+  color: #1DB954;
+}
+
+.post-content {
+  margin: 1rem 0;
+  color: #ddd;
+}
+
+.post-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.post-actions button {
+  background-color: #2a2a2a;
+  color: #B3B3B3;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.post-actions button:hover {
+  background-color: #1DB954;
+  color: white;
+}
+
+.comment-section {
+  margin-top: 1rem;
+}
+
+.comment-input {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #121212;
+  border: 1px solid #333;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.btn-submit-comment {
+  margin-top: 0.5rem;
+  background-color: #1DB954;
+  border: none;
+  padding: 0.4rem 1rem;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-submit-comment:hover {
+  background-color: #1ed760;
+}
+
+.comment-item {
+  margin-top: 0.5rem;
+  background-color: #222;
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+.posts-container {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+/* Siempre deja el espacio de 6px para la scrollbar */
+.posts-container {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: transparent transparent;
+  -ms-overflow-style: auto; /* IE/Edge */
+}
+
+/* Webkit: espacio fijo para scrollbar, pero invisible */
+.posts-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Fondo transparente por defecto */
+.posts-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Pulgar invisible por defecto */
+.posts-container::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 3px;
+}
+
+/* Al hacer hover: mostrar la scrollbar sutil */
+.posts-container:hover {
+  scrollbar-color: rgba(255, 255, 255, 0.08) transparent;
+}
+
+.posts-container:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.profile-pic {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 50%; /* círculo */
+  border: 2px solid #1DB954;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user-name {
+  font-weight: bold;
+  color: #1DB954;
+  font-size: 1rem;
+}
+
+.post-time {
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.post-collage {
+  display: flex;
+  gap: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  justify-content: center;
+}
+
+.post-collage img {
+  flex: 1;
+  max-width: 50%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.post-content ul {
+  padding-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.post-content li {
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+

@@ -1,0 +1,736 @@
+/* Reset y altura completa */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212; /* 🎨 Cambiado de #FAFAFA a fondo tipo Spotify */
+  color: #E1E1E1; /* 🎨 Texto claro para modo oscuro */
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1DB954;
+  white-space: nowrap;
+}
+
+.custom-dropdown {
+  position: relative;
+  width: 180px;
+  height: 100%;
+}
+
+.dropdown-btn {
+  width: 100%;
+  height: 100%;
+  padding: 0 0.8rem;
+  border: none;
+  background-color: #2c2c2c;
+  color: #E1E1E1;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.3s;
+}
+
+.dropdown-btn:hover,
+.dropdown-btn:focus {
+  background-color: #3a3a3a;
+}
+
+.dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #181818;
+  list-style: none;
+  padding: 0.3rem 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  border-radius: 4px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  z-index: 10;
+}
+
+.custom-dropdown.open .dropdown-list {
+  max-height: 250px;
+  opacity: 1;
+  overflow: auto;
+}
+
+.dropdown-list li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  color: #E1E1E1;
+}
+
+.dropdown-list li:hover {
+  background: #1DB954;
+  color: white;
+}
+
+.search-menu input[type="search"] {
+  flex: 1;
+  height: 100%;
+  padding: 0 0.8rem;
+  font-size: 1rem;
+  background: #2c2c2c;
+  border: none;
+  color: #E1E1E1;
+}
+
+.search-menu input::placeholder {
+  color: #AFAFAF;
+}
+
+.search-menu button {
+  background-color: #1DB954;
+  border: none;
+  padding: 0 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: white;
+  height: 100%;
+}
+
+.search-menu button:hover {
+  background-color: #17a94b;
+}
+
+.right-menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  white-space: nowrap;
+}
+
+.cart {
+  font-size: 1.6rem;
+  color: #E1E1E1;
+  text-decoration: none;
+}
+
+.cart:hover {
+  color: #1DB954;
+}
+
+.btn {
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.9rem;
+  border: 2px solid transparent;
+}
+
+.login {
+  background-color: transparent;
+  color: #E1E1E1;
+  border: 2px solid #E1E1E1;
+}
+
+.login:hover {
+  background-color: #E1E1E1;
+  color: #181818;
+}
+
+.signup {
+  background-color: #1DB954;
+  color: white;
+}
+
+.signup:hover {
+  background-color: #17a94b;
+}
+
+/* CONTENEDOR Y COLUMNAS */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.three-columns {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr 1fr;
+  flex: 1;
+}
+
+/* COLUMNAS LATERALES */
+.sidebar-left,
+.sidebar-right {
+  background-color: #1e1e1e; /* 🎨 Cambiado de #f0f0f0 */
+  padding: 1rem;
+}
+
+.sidebar-left ul {
+  list-style: none;
+  margin-top: 0.5rem;
+}
+
+.sidebar-left li {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-left a {
+  color: #E1E1E1; /* 🎨 Cambiado de #181818 */
+  text-decoration: none;
+}
+
+.sidebar-left a:hover {
+  color: #1DB954;
+}
+
+/* COLUMNA PRINCIPAL */
+.main-content {
+  background-color: #181818; /* 🎨 Cambiado de #fff */
+  padding: 1rem;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2); /* 🎨 Más visible en modo oscuro */
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.product-card {
+  background-color: #242424; /* 🎨 Cambiado de #fafafa */
+  border: 1px solid #333;    /* 🎨 Cambiado de #ddd */
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  color: #E1E1E1;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.product-card h3 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.product-card .price {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.product-card .add-to-cart {
+  background-color: #1DB954;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.product-card .add-to-cart:hover {
+  background-color: #17a94b;
+}
+
+/* EXTRA SECTION */
+.extra-section {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #1e1e1e; /* 🎨 Cambiado de #f8f8f8 */
+  border-radius: 8px;
+  color: #ccc;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .three-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar-left,
+  .sidebar-right {
+    display: none;
+  }
+}
+
+.sidebar-left nav ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0;
+  border-bottom: 1px solid #333; /* raya entre secciones */
+  padding-bottom: 1rem;
+}
+
+.sidebar-left nav ul:last-child {
+  border-bottom: none; /* quita línea en el último grupo */
+}
+
+.sidebar-left nav .menu-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+  color: #1DB954;
+  text-transform: uppercase;
+}
+
+.sidebar-left nav ul li {
+  margin-bottom: 0.6rem;
+}
+
+.sidebar-left nav ul li a {
+  color: #E1E1E1;
+  text-decoration: none;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.sidebar-left nav ul li a:hover {
+  color: #1DB954;
+}
+
+.sidebar-left nav ul li a i {
+  min-width: 18px;
+  text-align: center;
+  color: #1DB954;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* evitar scroll global */
+}
+
+.container {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr 2.5fr 1fr;
+  overflow: hidden;
+  background-color: #121212;
+}
+
+.sidebar-left,
+.sidebar-right {
+  position: fixed;
+  top: 60px;
+  bottom: 0;
+  width: calc((100% / (1 + 2.5 + 1)) * 1);
+  overflow-y: auto;
+  padding: 1rem;
+  background-color: #1e1e1e;
+  z-index: 999;
+}
+
+.sidebar-left {
+  left: 0;
+}
+
+.sidebar-right {
+  right: 0;
+}
+
+.main-content {
+  position: fixed;
+  top: 60px;
+  left: calc((100% / (1 + 2.5 + 1)) * 1);
+  right: calc((100% / (1 + 2.5 + 1)) * 1);
+  bottom: 0;
+  padding: 1rem;
+  background-color: #181818;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Animación de subrayado para los links del sidebar */
+.sidebar-left nav ul li a {
+  color: #E1E1E1;
+  text-decoration: none;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  transition: color 0.3s ease;
+  padding-bottom: 3px;
+  /* Para que el cursor cambie suavemente */
+  cursor: pointer;
+}
+
+/* Línea animada que aparece al hacer hover */
+.sidebar-left nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #1DB954;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+/* Al pasar el mouse, el texto cambia color y la línea crece */
+.sidebar-left nav ul li a:hover {
+  color: #1DB954;
+}
+
+.sidebar-left nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Pequeña animación en los íconos al hacer hover en el link */
+.sidebar-left nav ul li a i {
+  min-width: 18px;
+  text-align: center;
+  color: #1DB954;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-left nav ul li a:hover i {
+  transform: scale(1.2) rotate(10deg);
+}
+
+/* Añadí un suave efecto de sombra al pasar el mouse por el item */
+.sidebar-left nav ul li a:hover {
+  text-shadow: 0 0 8px rgba(29, 185, 84, 0.7);
+}
+
+.sidebar-left nav ul li a {
+  color: #E1E1E1;
+  text-decoration: none;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  padding: 0.5rem 1rem; /* espacio arriba-abajo y a los lados para abarcar toda la fila */
+  cursor: pointer;
+  width: 100%; /* ocupa todo el ancho */
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Hover con fondo y texto */
+.sidebar-left nav ul li a:hover {
+  color: #fff;
+  background-color: #1DB954;
+  text-shadow: 0 0 8px rgba(29, 185, 84, 0.9);
+}
+
+/* Icono con efecto animado */
+.sidebar-left nav ul li a i {
+  min-width: 18px;
+  text-align: center;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+/* Icono aumenta y rota ligeramente al hover */
+.sidebar-left nav ul li a:hover i {
+  transform: scale(1.3) rotate(10deg);
+}
+
+/* Siempre deja espacio de 6px para scrollbar */
+.sidebar-left {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: transparent transparent;
+  -ms-overflow-style: auto; /* IE/Edge */
+}
+
+/* Webkit: espacio fijo para scrollbar, pero invisible */
+.sidebar-left::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Fondo transparente por defecto */
+.sidebar-left::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Pulgar invisible por defecto */
+.sidebar-left::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 3px;
+}
+
+/* Al hacer hover: mostrar scrollbar sutil */
+.sidebar-left:hover {
+  scrollbar-color: rgba(255, 255, 255, 0.08) transparent;
+}
+
+.sidebar-left:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.sidebar-right ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.chat-preview-list li,
+.novedades-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: #E1E1E1;
+}
+
+.chat-status {
+  margin-left: auto;
+  font-size: 0.75rem;
+}
+
+.chat-status.online {
+  color: #1DB954;
+}
+
+.chat-status.offline {
+  color: #555;
+}
+
+.sidebar-right h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+  color: #1DB954;
+}
+
+.sidebar-right hr {
+  border: none;
+  border-top: 1px solid #333;
+  margin: 1rem 0;
+}
+
+#chat-windows-container {
+  position: fixed;
+  bottom: 0;
+  right: 1rem;
+  display: flex;
+  gap: 1rem;
+  z-index: 9999;
+}
+
+.chat-window {
+  width: 280px;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+  overflow: hidden;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.chat-header {
+  background-color: #1DB954;
+  color: white;
+  padding: 0.5rem 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.chat-header button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.chat-body {
+  padding: 0.8rem;
+  flex: 1;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.chat-input {
+  display: flex;
+  border-top: 1px solid #333;
+  padding: 0.4rem;
+  background-color: #2c2c2c;
+}
+
+.chat-input input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: #E1E1E1;
+  padding: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.chat-input input::placeholder {
+  color: #999;
+}
+
+.chat-input button {
+  background: none;
+  border: none;
+  color: #1DB954;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding-left: 0.5rem;
+}
+
+.chat-window {
+  width: 300px;
+  height: 420px;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+  overflow: hidden;
+  animation: slideUp 0.3s ease;
+}
+
+.chat-header {
+  background-color: #1DB954;
+  color: white;
+  padding: 0.6rem 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.chat-body {
+  flex: 1;
+  padding: 0.8rem;
+  overflow-y: auto;
+  background-color: #181818;
+  color: #E1E1E1;
+  font-size: 0.9rem;
+}
+
+.chat-placeholder {
+  text-align: center;
+  color: #999;
+  font-size: 0.85rem;
+}
+
+.chat-actions {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  background-color: #1e1e1e;
+  border-top: 1px solid #333;
+  justify-content: start;
+}
+
+.chat-actions button {
+  background: none;
+  border: none;
+  color: #AFAFAF;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.chat-input {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #333;
+  padding: 0.4rem;
+  background-color: #2c2c2c;
+}
+
+.chat-input input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: #E1E1E1;
+  padding: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.chat-input input::placeholder {
+  color: #999;
+}
+
+.chat-input button {
+  background: none;
+  border: none;
+  color: #1DB954;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0 0.4rem;
+}
+
+/* Preloader pantalla de inicio */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeOut 1s ease 2.5s forwards;
+}
+
+.preloader-logo {
+  width: 160px;
+  animation: zoomIn 1.5s ease;
+  filter: drop-shadow(0 0 15px #1DB954);
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

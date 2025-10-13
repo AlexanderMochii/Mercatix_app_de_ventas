@@ -1,0 +1,159 @@
+/* === NAVBAR estilo Spotify === */
+.navbar {
+  background-color: #000000;
+  color: #B3B3B3;
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  gap: 2rem;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1DB954;
+  white-space: nowrap;
+}
+
+.search-menu {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: 600px;
+  height: 40px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #2a2a2a;
+}
+
+.custom-dropdown {
+  position: relative;
+  width: 180px;
+  height: 100%;
+}
+
+.dropdown-btn,
+.search-menu input[type="search"] {
+  background-color: #2a2a2a;
+  color: #fff;
+  border: none;
+  padding: 0 0.8rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.dropdown-btn:hover,
+.dropdown-btn:focus {
+  background-color: #3a3a3a;
+}
+
+.dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #181818;
+  color: #B3B3B3;
+  list-style: none;
+  padding: 0.3rem 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  border-radius: 4px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  z-index: 10;
+}
+
+.custom-dropdown.open .dropdown-list {
+  max-height: 250px;
+  opacity: 1;
+  overflow: auto;
+}
+
+.dropdown-list li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.dropdown-list li:hover {
+  background: #1DB954;
+  color: white;
+}
+
+.search-menu input::placeholder {
+  color: #AFAFAF;
+}
+
+.search-menu button {
+  background-color: #1DB954;
+  color: white;
+  border: none;
+  padding: 0 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  height: 100%;
+}
+
+.search-menu button:hover {
+  background-color: #1ed760;
+}
+
+.right-menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  white-space: nowrap;
+}
+
+.cart {
+  font-size: 1.6rem;
+  color: #B3B3B3;
+  text-decoration: none;
+}
+
+.cart:hover {
+  color: #1DB954;
+}
+
+.btn {
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.9rem;
+  border: 2px solid transparent;
+}
+
+.btn.login {
+  border: 2px solid #B3B3B3;
+  color: #B3B3B3;
+  background-color: transparent;
+}
+
+.btn.login:hover {
+  background-color: #B3B3B3;
+  color: #000000;
+}
+
+.btn.signup {
+  background-color: #1DB954;
+  color: white;
+}
+
+.btn.signup:hover {
+  background-color: #1ed760;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px; /* asegúrate que coincide con el margen del container */
+  z-index: 1000;
+}
+
